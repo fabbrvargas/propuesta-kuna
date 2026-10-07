@@ -274,6 +274,28 @@ figcaption, .formatos-nota {
   .revision-cols { grid-template-columns: 1fr 1fr; gap: 48px; }
 }
 
+/* ---------- Aclaraciones y preguntas ---------- */
+.aclaracion {
+  margin-top: 28px !important; padding: 18px 20px;
+  border-left: 3px solid var(--arena); background: var(--blanco-2);
+  color: var(--carbon) !important; font-size: 15.5px; max-width: none;
+}
+.aclaracion strong { font-weight: 600; }
+.aclaracion-descuento { border-left-color: var(--verde); }
+
+.preguntas { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--carbon); }
+.preguntas-intro { color: var(--carbon) !important; font-size: 16.5px; }
+.preguntas dl { margin-top: 18px; }
+.preguntas dl > div { padding: 20px 0; border-bottom: 1px solid var(--linea); }
+.preguntas dt { font-family: var(--serif); font-size: clamp(21px, 2.2vw, 25px); font-weight: 600; line-height: 1.25; margin-bottom: 8px; }
+.preguntas dd { color: var(--carbon-2); max-width: 64ch; }
+
+.ventajas { margin-top: 28px; display: grid; gap: 0; border-top: 1px solid var(--linea); }
+.ventajas li { padding: 16px 0 16px 22px; border-bottom: 1px solid var(--linea); position: relative; }
+.ventajas li::before { content: ''; position: absolute; left: 0; top: 25px; width: 8px; height: 8px; border-radius: 50%; background: var(--verde); }
+.ventajas strong { display: block; font-weight: 600; }
+.ventajas span { display: block; color: var(--carbon-2); font-size: 15.5px; }
+
 /* ---------- 5 · Trabajo previo ---------- */
 .seccion-referencias {
   background: var(--carbon); color: var(--blanco);
@@ -455,7 +477,10 @@ figcaption, .formatos-nota {
   .placeholder { border: 1pt dashed #000; }
   .condiciones { display: block; }
 
-  .bloque-precio, .tabla, .linea-tiempo li, .condiciones > div, .revision { break-inside: avoid; }
+  .aclaracion { border-left: 2pt solid #000; padding: 8px 12px; }
+  .preguntas { border-top: 1pt solid #000; margin-top: 18px; padding-top: 12px; }
+  .preguntas dt { font-size: 12pt; }
+  .bloque-precio, .tabla, .linea-tiempo li, .condiciones > div, .revision, .aclaracion, .preguntas dl > div, .ventajas li { break-inside: avoid; }
   h2, h3 { break-after: avoid; }
   .seccion-inversion { break-before: page; }
 }
